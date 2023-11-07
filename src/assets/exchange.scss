@@ -1,0 +1,136 @@
+.exchange-funds-section {
+  width: 1163px;
+  margin: 0 auto;
+  .exchange-rate-value {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .error {
+    text-align: center;
+    color: red;
+    padding-bottom: 50px;
+  }
+  .exchange-button {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 50px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+  }
+  .transfer {
+    width: 528px;
+    height: 209px;
+    border-radius: 15px;
+    background: #fbfbfb;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 18px 26px 22px 26px;
+
+    .title {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    select,
+    input {
+      width: 474px;
+      height: 50px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      text-align: right;
+      border: none;
+      background: #fff;
+      box-shadow: 2px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    input {
+      padding-left: 17px;
+      text-align: Left;
+    }
+
+    .input-wrapper {
+      position: relative;
+      .currency-label {
+        position: absolute;
+        top: 11px;
+        right: 8px;
+        color: rgba(0, 0, 0, 0.5);
+        user-select: none;
+      }
+    }
+
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: url(./images/selector-arrow.svg) no-repeat;
+      background-position-x: 99%;
+      background-position-y: 20px;
+      border: 1px solid #dfdfdf;
+      border-radius: 2px;
+      margin-right: 2rem;
+      padding-right: 25px;
+    }
+
+    .select-value {
+      width: 200px;
+      height: 50px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 10px;
+      position: absolute;
+      .account-name {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: right;
+        user-select: none;
+        cursor: default;
+      }
+    }
+
+    input::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .select-wrapper {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .exchange-funds-section {
+    width: 100%;
+    .wrapper {
+      display: block;
+      .transfer {
+        margin: 0 auto 20px auto;
+        max-width: 528px;
+        width: auto;
+        select {
+          width: 100%;
+        }
+        input {
+          width: 100%;
+        }
+      }
+
+      .transfer-from,
+      .transfer-to {
+        margin: 0 auto;
+      }
+      .transfer-from {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

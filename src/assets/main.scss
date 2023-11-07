@@ -1,0 +1,479 @@
+body {
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  overflow-x: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: #538db7;
+  margin-bottom: 40px;
+}
+
+.navigation {
+  color: #fff;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-element-logo {
+  margin-right: auto;
+}
+
+.navigation-element-logo .nav-link {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.navigation-element:last-child {
+  padding-left: 34px;
+}
+
+.nav-link {
+  font-style: normal;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation-element-logo .nav-link:hover,
+.navigation-element-logo .nav-link:focus {
+  color: #ffffffc2;
+}
+
+/*Accounts styles start*/
+.accounts-section {
+  max-width: 528px;
+  margin: 0 auto 78px auto;
+  border-radius: 15px;
+  background: #fbfbfb;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 35px 22px 20px 22px;
+}
+
+.accounts-section .title {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.account {
+  display: grid;
+  grid-template-columns: 2fr 0.9fr;
+  grid-gap: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.account:last-child {
+  border-bottom: none;
+}
+
+.account-name {
+  text-align: right;
+}
+
+.loading {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/*Accounts styles end*/
+
+/*Deposits styles start*/
+.main-page {
+  .deposits-section {
+    max-width: 528px;
+    margin: 0 auto 78px auto;
+    border-radius: 15px;
+    background: #fbfbfb;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 35px 22px 20px 22px;
+    .no-deposits {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .deposits-section .title {
+    text-align: center;
+    padding-bottom: 12px;
+  }
+
+  .deposit {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr;
+    grid-gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .deposit:last-child {
+    border-bottom: none;
+  }
+
+  .deposit .amount,
+  .deposit .duration {
+    text-align: right;
+  }
+}
+/*Deposits styles end*/
+
+/*Exchange rates styles start*/
+
+@media (min-width: 1850px) {
+  .main-page .exchange-rates-section {
+    position: absolute;
+    top: 110px;
+    right: 38px;
+  }
+}
+
+.exchange-rates-section {
+  width: 600px;
+  margin: 0 auto 78px auto;
+  border-radius: 15px;
+  background: #fbfbfb;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 35px 22px 20px 22px;
+
+  .title {
+    text-align: center;
+    padding-bottom: 28px;
+  }
+
+  .exchange-deals {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 17%;
+    padding-bottom: 15px;
+  }
+
+  .currency-deatils {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    align-items: center;
+    position: relative;
+    height: 47px;
+    padding-left: 86px;
+    margin-bottom: 15px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 69px;
+      height: 47px;
+    }
+
+    &.dollar::before {
+      background: url(./images/usa.png) no-repeat;
+      background-size: contain;
+    }
+
+    &.euro::before {
+      background: url(./images/euro.png) no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 355px;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.13);
+      bottom: -8px;
+      left: 85px;
+    }
+    &:last-child:after {
+      content: none;
+    }
+
+    .amount {
+      text-align: center;
+    }
+
+    .delta {
+      font-size: 20px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        background: url(./images/arrow-up.svg) no-repeat;
+        background-size: contain;
+        height: 25px;
+        width: 25px;
+        top: -2px;
+        right: -15px;
+      }
+      &.grow {
+        color: #dd1010;
+        &::after {
+          background: url(./images/arrow-up.svg) no-repeat;
+        }
+      }
+      &.fall {
+        color: #6add10;
+        &::after {
+          background: url(./images/arrow-down.svg) no-repeat;
+        }
+      }
+    }
+  }
+}
+
+/*Exchange rates styles end*/
+
+/*Time control panel styles start*/
+.footer {
+  width: 900px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  .time-control-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    .day-details {
+      grid-column: 1 / 3;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .text-input {
+    width: 276px;
+    padding: 20px;
+    height: 50px;
+    border: none;
+    font-size: 23px;
+    text-align: right;
+    filter: drop-shadow(2px 0px 7px rgba(0, 0, 0, 0.25));
+    &::placeholder {
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1850px) {
+  .footer {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .exchange-rates-section {
+    max-width: 520px;
+    width: auto;
+    margin: 0 auto 20px auto;
+    .currency-deatils {
+      .delta::after {
+        position: absolute;
+        right: -24px;
+      }
+      &::after {
+        width: 75%;
+      }
+    }
+  }
+  .footer {
+    width: auto;
+    .time-control-panel {
+      .day-details {
+        text-align: center;
+      }
+      .day-details,
+      .text-input,
+      .skip-days {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 620px) {
+  .footer {
+    .time-control-panel {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .footer {
+    .time-control-panel {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .footer {
+    .time-control-panel {
+      display: block;
+    }
+  }
+}
+
+button {
+  width: 276px;
+  height: 60px;
+  border-radius: 15px;
+  background: #74b4fe;
+  border: none;
+  font-weight: 700;
+  line-height: normal;
+  &:hover {
+    background: #74b4feb2;
+  }
+  &:active {
+    scale: 0.9;
+  }
+}
+@media (max-width: 950px) {
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  .hamburger-menu > span::before {
+    content: "";
+    top: -8px;
+  }
+  .hamburger-menu > span::after {
+    content: "";
+    top: 8px;
+  }
+
+  .navigation-list {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #eceff1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .navigation-element-logo .nav-link {
+    font-size: 38px;
+  }
+
+  .back {
+    width: 100%;
+    height: 100vh;
+    left: 300px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+  }
+
+  .navigation {
+    &.open {
+      .back {
+        display: block;
+      }
+      .navigation-list {
+        z-index: 2;
+        background-color: #538db7;
+        visibility: visible;
+        left: 0;
+        transition-duration: 0.25s;
+      }
+      .hamburger {
+        transform: rotate(45deg);
+        transition-duration: 0.25s;
+        &::before {
+          top: 0;
+          transform: rotate(0);
+        }
+        &::after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+      }
+      .hamburger::before {
+        transition-duration: 0.25s;
+        top: 0;
+        transform: rotate(0);
+      }
+      .hamburger::after {
+        transition-duration: 0.25s;
+        top: 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .navigation-element {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .navigation-element:hover {
+    background-color: #006e9e;
+  }
+}
+/*Time control panel styles end*/

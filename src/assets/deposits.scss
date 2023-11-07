@@ -1,0 +1,107 @@
+.deposits-page {
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100% - 70px);
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 70px;
+    padding: 0 60px 0 30px;
+  }
+
+  .deposit {
+    position: relative;
+    width: 531px;
+    min-height: 456px;
+    border-radius: 15px;
+    background: rgba(251, 251, 251, 0.98);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 46px 25px 19px 32px;
+    .error {
+      text-align: center;
+      color: red;
+      padding-bottom: 10px;
+    }
+    .title {
+      text-align: center;
+      padding-bottom: 46px;
+    }
+
+    .description {
+      font-size: 24px;
+      font-weight: 400;
+      padding-bottom: 26px;
+    }
+
+    input {
+      width: 474px;
+      height: 49px;
+      margin-bottom: 25px;
+      border: none;
+      fill: #fff;
+      filter: drop-shadow(2px 0px 7px rgba(0, 0, 0, 0.25));
+      padding-left: 17px;
+      text-align: Left;
+      font-style: normal;
+      font-weight: 700;
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 700;
+      }
+    }
+
+    .input-wrapper {
+      position: relative;
+      .currency-label {
+        position: absolute;
+        top: 11px;
+        right: 8px;
+        color: rgba(0, 0, 0, 0.5);
+        user-select: none;
+      }
+    }
+
+    button {
+      margin: 0 auto;
+      display: block;
+      width: 178px;
+      height: 60px;
+    }
+
+    .label {
+      font-weight: 400;
+      display: inline-flex;
+      padding: 21px 55px 20px 55px;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -35px;
+      right: -55px;
+      border-radius: 53px;
+      background: #dcff78;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+@media (max-width: 1800px) {
+  .deposits-page {
+    .wrapper {
+      display: block;
+      position: inherit;
+      overflow: initial;
+      .deposit {
+        margin: 0 auto;
+        margin-bottom: 100px;
+        max-width: 531px;
+        width: auto;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
