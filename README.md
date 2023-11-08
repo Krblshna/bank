@@ -6,7 +6,7 @@ Install mock server and run
 
 ```bash
 $ npm install
-$ node start
+$ node server
 ```
 
 Then install and run bank
